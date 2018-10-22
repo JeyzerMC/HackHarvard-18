@@ -12,7 +12,7 @@ def get_prediction(content, project_id, model_id):
     params = {}
     request = prediction_client.predict(name, payload, params)
     return request  # waits till request is returned
-
+#sees whether prediction mmatches the tag
 if __name__ == '__main__':
     file_path = sys.argv[1]
     file_path = "/Users/alaashamandy/Desktop/Work/Development/hackharvard/HackHarvard-18/cropped.jpg"
@@ -23,3 +23,4 @@ if __name__ == '__main__':
         content = ff.read()
 
     print(get_prediction(content, project_id,  model_id))
+    
